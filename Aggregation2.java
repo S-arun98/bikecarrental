@@ -1,0 +1,34 @@
+class Student
+{
+	int id;
+	String name;
+	Student(int id,String name)
+	{
+		this.id=id;
+		this.name=name;	
+	}
+}
+class College
+{
+	String place;
+	String clgname;
+	Student std;
+	College(String place,String clgname,Student std)
+	{
+		this.place=place;
+		this.clgname=clgname;
+		this.std=std;
+	}
+	void add()
+	{
+		System.out.println(place+" "+clgname);
+		System.out.println(std.id+" "+std.name);
+
+	}
+	public static void main(String args[])
+	{
+		Student obj=new Student(3,"Arun");
+		College obj2=new College("Devakottai","MZCET",obj);
+		obj2.add();
+	}
+}
